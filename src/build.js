@@ -22,7 +22,7 @@ const getIcons = async (style) => {
   return Promise.all(
     files.map(async (file) => ({
       svg: await fs.readFile(`./dist/icons/${style}/${file}`, 'utf8'),
-      componentName: `${camelcase(file.replace(/\.svg$/, ''), {
+      componentName: `${camelcase(file.replace(/\.svg$/, '').replace(/[^a-zA-Z0-9_]/g, ''), {
         pascalCase: true,
       })}Icon`,
     }))
