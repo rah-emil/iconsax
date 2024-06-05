@@ -1,0 +1,40 @@
+{
+  "name": "@rah-emil/iconsax",
+  "version": "1.0.0",
+  "description": "Iconsax icons for Vue 3 / Nuxt 3",
+  "type": "module",
+  "files": [
+    "packages",
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run build:icons && npm run build:vue3",
+    "build:vue3": "node src/build.js",
+    "build:icons": "npm run build-bold && npm run build-broken && npm run build-bulk && npm run build-linear && npm run build-outline && npm run build-twotone",
+    "build-bold": "svgo -f ./src/icons/bold -o ./dist/icons/bold",
+    "build-broken": "svgo --config=svgo-alternate.config.js -f ./src/icons/broken -o ./dist/icons/broken",
+    "build-bulk": "svgo --config=svgo-alternate.config.js -f ./src/icons/bulk -o ./dist/icons/bulk",
+    "build-linear": "svgo --config=svgo-alternate.config.js -f ./src/icons/linear -o ./dist/icons/linear",
+    "build-outline": "svgo -f ./src/icons/outline -o ./dist/icons/outline",
+    "build-twotone": "svgo --config=svgo-alternate.config.js -f ./src/icons/twotone -o ./dist/icons/twotone"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rah-emil/iconsax.git"
+  },
+  "keywords": [
+    "iconsax",
+    "vue3",
+    "nuxt3"
+  ],
+  "homepage": "https://github.com/rah-emil/iconsax#readme",
+  "devDependencies": {
+    "@babel/core": "^7.24.6",
+    "@vue/compiler-dom": "^3.4.27",
+    "camelcase": "^8.0.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.79.1",
+    "svgo": "^2.8.0",
+    "util": "^0.12.5"
+  }
+}
