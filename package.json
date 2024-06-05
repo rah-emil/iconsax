@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "description": "Iconsax icons for Vue 3 / Nuxt 3",
   "type": "module",
-  "files": [
-    "packages",
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "build": "npm run build:icons && npm run build:vue3",
     "build:vue3": "node src/build.js",
