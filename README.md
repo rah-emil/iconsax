@@ -17,7 +17,7 @@ import { AlarmIcon } from '@rah-emil/iconsax/dist/bold';
 
 <template>
   <div>
-    <LogoIcon class="logo" />
+    <AlarmIcon />
     <p>...</p>
   </div>
 </template>
